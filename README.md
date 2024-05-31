@@ -7,6 +7,7 @@ This repository contains my solutions to LeetCode problems that I attempt on a d
 - [Motivation](#motivation)
 - [Problems](#problems)
 - [Technologies](#technologies)
+- [Commits](#commits)
 
 ## Motivation
 
@@ -22,3 +23,15 @@ Each problem is organized in a separate folder, named according to the LeetCode 
 ## Technologies
 
 The solutions in this repository are primarily written in Java, but I may occasionally use other programming languages as well. The specific language used for each problem will be evident from the file extension.
+
+## Commits
+Commit messages in this repository will adhere to the following structure:
+
+- The main commit message will be the name of the LeetCode problem being solved.
+- Additional details will be provided in the commit body, including:
+  - Execution time of the solution, along with a percentile ranking indicating the performance compared to other submissions.
+  `Time: [execution_time] ([percentile_ranking])`
+  - Memory consumption of the solution, along with a percentile ranking indicating the memory efficiency compared to other submissions.
+  `Memory: [memory_usage] ([percentile_ranking])`
+
+This consistent commit message format will ensure clear and concise communication of the problem being solved, as well as the performance characteristics of the implemented solution in terms of time complexity and space complexity relative to other submissions on the LeetCode platform.
