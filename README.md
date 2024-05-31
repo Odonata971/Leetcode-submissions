@@ -16,9 +16,8 @@ As a programmer, solving coding problems is an excellent way to improve problem-
 
 Each problem is organized in a separate folder, named according to the LeetCode problem number and title. Within each folder, you'll find:
 
-- `problem.md`: A file containing the problem statement and any additional information or constraints.
-- `solution.py` (or the appropriate file extension for your preferred language): The source code file containing my solution to the problem.
-- `README.md` (optional): A file with additional notes, explanations, or thought process related to the solution.
+- `README.md`: A file containing the problem statement and any additional information or constraints.
+- `[problem_name].java` (or the appropriate file extension for your preferred language): The source code file containing my solution to the problem.
 
 ## Technologies
 
