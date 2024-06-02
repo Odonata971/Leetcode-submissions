@@ -8,5 +8,4 @@ class Solution:
             temp = s[i]
             s[i] = s[n - i - 1]
             s[n - i - 1] = temp
-        return s
         
