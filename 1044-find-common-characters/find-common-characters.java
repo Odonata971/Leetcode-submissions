@@ -42,7 +42,27 @@ class Solution {
         return t;
     }
     
+    /*
+    List<String> res = new ArrayList<>();
+        for (char ch = 'a'; ch <= 'z'; ch++) {
+            int minCount = Integer.MAX_VALUE;
 
+            for (String s : words) {
+                int count = 0;
+                for (char c : s.toCharArray()) {
+                    if (c == ch) {
+                        ++count;
+                    }
+                }
+                minCount = Math.min(minCount, count);
+            }
+
+            for (int i = 0; i < minCount; i++) {
+                res.add(String.valueOf(ch));
+            }
+        }
+        return res;
+     */
     /*
     public List<String> commonChars(String[] words) {
         /*int n = words.length;
