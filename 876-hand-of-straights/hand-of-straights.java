@@ -4,20 +4,26 @@ class Solution {
             return false;
         }
 
-        Map<Integer, Integer> cardCount = new TreeMap<>();
-        for (int card : hand) {
-            cardCount.put(card, cardCount.getOrDefault(card, 0) + 1);
+        Map<Integer, Integer> freq = new HashMap<>();
+
+        for (int card: hand) {
+            freq.put(card, freq.getOrDefault(card, 0) + 1);
         }
 
-        for (int card : cardCount.keySet()) {
-            int count = cardCount.get(card);
-            if (count > 0) {
-                for (int i = 0; i < groupSize; ++i) {
-                    if (cardCount.getOrDefault(card + i, 0) < count) {
-                        return false;
-                    }
-                    cardCount.put(card + i, cardCount.get(card + i) - count);
+        Arrays.sort(hand);
+
+        for (int i = 0; i < hand.length; i++) {
+            if (freq.get(hand[i]) == 0) {
+                continue;
+            }
+
+            for (int j = 0; j < groupSize; j++) {
+                int currCard = hand[i] + j;
+                if (freq.getOrDefault(currCard, 0) == 0) {
+                    return false;
                 }
+
+                freq.put(currCard, freq.get(currCard) - 1);
             }
         }
 
