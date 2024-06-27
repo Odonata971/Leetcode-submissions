@@ -4,7 +4,6 @@ class Solution {
         int[] counts = new int[100001];
 
         for (int i = 0; i < n; i++) {
-            System.out.println(counts[edges[i][0]]);
             counts[edges[i][0]]++;
             counts[edges[i][1]]++;
         }
