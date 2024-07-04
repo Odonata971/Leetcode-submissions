@@ -1,4 +1,7 @@
 class Solution {
+    /* 
+    Brute force  
+
     public List<Integer> getRow(int rowIndex) {
         return generate(rowIndex + 1).get(rowIndex);
     }
@@ -17,6 +20,19 @@ class Solution {
             result.add(line);
         }
         return result;
+    }*/
 
+
+    /* Formule de pascal pour calcul de ligne immédiat*/
+    public List<Integer> getRow(int rowIndex) {
+        List<Integer> line = new ArrayList<>();
+        long num = 1;
+
+        for (int i = 0; i <= rowIndex; i++) {
+            line.add((int) num);
+            num = num * (rowIndex - i);
+            num = num / (i + 1);
+        }
+        return line;
     }
 }
