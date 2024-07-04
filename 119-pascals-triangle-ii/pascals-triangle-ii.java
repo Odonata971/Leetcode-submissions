@@ -1,6 +1,6 @@
 class Solution {
     /* 
-    Brute force  
+    Algorithme par Brute force (algo + efficace en dessous)
 
     public List<Integer> getRow(int rowIndex) {
         return generate(rowIndex + 1).get(rowIndex);
