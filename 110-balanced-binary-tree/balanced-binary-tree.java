@@ -24,10 +24,10 @@ class Solution {
         if (left == -1 || right == -1 || Math.abs(left - right) > 1) {
             return -1;
         }
-        return Math.max(depth(node.left), depth(node.right)) + 1;
+        return Math.max(left, right) + 1;
     }
-    
+
     public boolean isBalanced(TreeNode root) {
-        return root == null || !(depth(root) == -1);
+        return depth(root) != -1;
     }
 }
