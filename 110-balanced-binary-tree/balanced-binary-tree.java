@@ -14,10 +14,6 @@
  * }
  */
 class Solution {
-    public boolean isBalanced(TreeNode root) {
-        return root == null || !(depth(root) == -1);
-    }
-
     private int depth(TreeNode node) {
         if (node == null) {
             return 0;
@@ -29,5 +25,9 @@ class Solution {
             return -1;
         }
         return Math.max(depth(node.left), depth(node.right)) + 1;
+    }
+    
+    public boolean isBalanced(TreeNode root) {
+        return root == null || !(depth(root) == -1);
     }
 }
