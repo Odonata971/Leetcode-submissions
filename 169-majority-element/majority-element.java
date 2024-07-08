@@ -7,11 +7,12 @@ class Solution {
             freq.put(nums[i], freq.getOrDefault(nums[i], 0) + 1);
         }
         
+        /* Print debug for hashmaps
         for (Integer name: freq.keySet()) {
             String key = name.toString();
             String value = freq.get(name).toString();
             System.out.println(key + " " + value);
-        }
+        }*/
 
         int max = nums[0];
         for (int key: freq.keySet()) {
