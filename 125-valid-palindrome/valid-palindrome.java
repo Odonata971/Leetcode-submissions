@@ -1,13 +1,13 @@
 class Solution {
     public boolean isPalindrome(String s) {
-        s = s.replaceAll("[^a-zA-Z\\d]*","").toLowerCase();
+        StringBuilder onlyLetters = new StringBuilder();
         int n = s.length();
-        for (int i = 0; i < n / 2; i++) {
-            if (s.charAt(i) != s.charAt(n - 1 - i)) {
-                return false;
+        for (int i = 0; i < n; i++) {
+            if (Character.isLetterOrDigit(s.charAt(i))) {
+                onlyLetters.append(Character.toLowerCase(s.charAt(i)));
             }
         }
-        return true;
+        return new String(onlyLetters).equals(new String(onlyLetters.reverse()));
         
     }
 }
