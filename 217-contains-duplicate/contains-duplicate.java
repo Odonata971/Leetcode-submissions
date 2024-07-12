@@ -2,8 +2,8 @@ class Solution {
     public boolean containsDuplicate(int[] nums) {
         Set<Integer> uniqueNums = new HashSet<>();
         for (int i = 0; i < nums.length; i++) {
-            if (uniqueNums.contains(nums[i])) break;
-            uniqueNums.add(nums[i]);
+            if (!uniqueNums.add(nums[i])) break;
+            
         }
         return nums.length != uniqueNums.size();
     }
