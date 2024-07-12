@@ -18,11 +18,11 @@ As a programmer, solving coding problems is an excellent way to improve problem-
 Each problem is organized in a separate folder, named according to the LeetCode problem number and title. Within each folder, you'll find:
 
 - `README.md`: A file containing the problem statement and any additional information or constraints.
-- `[problem_name].java` (or the appropriate file extension for your preferred language): The source code file containing my solution to the problem.
+- `[problem_name].[extension]`: The source code file containing my solution to the problem.
 
 ## Technologies
 
-The solutions in this repository are primarily written in Java, but I may occasionally use other programming languages as well. The specific language used for each problem will be evident from the file extension.
+The solutions in this repository are primarily written in Java, but I may occasionally use other programming languages as well as Kotlin, Python or even SQL. The specific language used for each problem will be evident from the file extension.
 
 ## Commits
 Commit messages in this repository will adhere to the following structure:
