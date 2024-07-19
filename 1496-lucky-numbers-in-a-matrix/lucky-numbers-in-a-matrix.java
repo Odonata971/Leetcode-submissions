@@ -1,34 +1,37 @@
 class Solution {
+    /* Next approach trying to optimize time */
     public List<Integer> luckyNumbers (int[][] matrix) {
         List<Integer> luckyNumbers = new ArrayList<>();
 
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                if (minLine(matrix[i][j], matrix[i]) && maxCol(matrix[i][j], matrix, j)) {
-                    luckyNumbers.add(matrix[i][j]);
-                }
+            int column = minLine(matrix, i);
+
+            if (maxCol(matrix, i, column)) {
+                luckyNumbers.add(matrix[i][column]);
             }
         }
         return luckyNumbers;
     }
 
-    private boolean minLine(int value, int[] line) {
-        int min = line[0];
-        for (int i = 0; i < line.length; i++) {
-            if (min > line[i]) {
-                min = line[i];
+    private int minLine(int[][] matrix, int i) {
+        int min = matrix[i][0];
+        int col = 0;
+        for (int j = 1; j < matrix[i].length; j++) {
+            if (min >  matrix[i][j]) {
+                min =  matrix[i][j];
+                col = j;
             }
         }
-        return min == value;
+        return col;
     }
 
-    private boolean maxCol(int value, int[][] matrix, int j) {
-        int max = matrix[0][j];
-        for (int i = 0; i < matrix.length; i++) {
-            if (max < matrix[i][j]) {
-                max = matrix[i][j];
+    private boolean maxCol(int[][] matrix,int i, int j) {
+        int max = matrix[i][j];
+        for (int k = 0; k < matrix.length; k++) {
+            if (max < matrix[k][j]) {
+                return false;
             }
         }
-        return max == value;
+        return true;
     }
 }
