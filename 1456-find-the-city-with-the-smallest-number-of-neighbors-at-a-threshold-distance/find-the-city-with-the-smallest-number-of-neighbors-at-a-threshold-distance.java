@@ -6,12 +6,9 @@ class Solution {
 
         //Fill the distances with infinity for the moment
         for (int i = 0; i < n; i++) {
-            Arrays.fill(distances[i], Integer.MAX_VALUE);
-        }
-
-        // changes the distance to itself to 0
-        for (int i = 0; i < n; i++) {
-            distances[i][i] = 0;
+            for (int j = 0; j < n; j++) {
+                distances[i][j] = (i != j ? Integer.MAX_VALUE / 2 : 0);
+            }
         }
 
         //put the right distances in the distance matrix
@@ -28,9 +25,7 @@ class Solution {
         for (int k = 0; k < n; k++) {
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
-                    if (distances[i][k] != Integer.MAX_VALUE 
-                        && distances[k][j] != Integer.MAX_VALUE 
-                        && distances[i][j] > distances[i][k] + distances[k][j]) {
+                    if (distances[i][j] > distances[i][k] + distances[k][j]) {
                         distances[i][j] = distances[i][k] + distances[k][j];
                     }
                 }
@@ -42,7 +37,7 @@ class Solution {
         for (int i = 0; i < n; i++) {
             int reachableCities = 0;
             for (int j = 0; j < n; j++) {
-                if (distances[i][j] <= distanceThreshold) {
+                if (i != j && distances[i][j] <= distanceThreshold) {
                     reachableCities++;
                 }
             }
