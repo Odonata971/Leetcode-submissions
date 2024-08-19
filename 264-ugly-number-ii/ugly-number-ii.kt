@@ -6,7 +6,7 @@ class Solution {
        val set: MutableSet<Long> = HashSet<Long>();
        q.offer(1)
        set.add(1)
-       var ans : Long = 0
+       var ans: Long = 0
 
        for (i in 1..n) {
             ans = q.poll()
