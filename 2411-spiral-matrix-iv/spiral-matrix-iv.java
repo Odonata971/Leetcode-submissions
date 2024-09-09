@@ -21,30 +21,26 @@ class Solution {
         
         while (head != null && left <= right && top <= bottom) {
 
-            for (int i = left; i <= right; i++) {
-                if (head == null) break;
+            for (int i = left; i <= right && head != null; i++) {
                 matrix[top][i] = head.val;
                 head = head.next;
             }
             top++;
 
-            for (int i = top; i <= bottom; i++) {
-                if (head == null) break;
+            for (int i = top; i <= bottom && head != null; i++) {
                 matrix[i][right] = head.val;
                 head = head.next;
             }
             right--;
 
             if (top <= bottom) {
-                for (int i = right; i >= left; i--) {
-                    if (head == null) break;
+                for (int i = right; i >= left && head != null; i--) {
                     matrix[bottom][i] = head.val;
                     head = head.next;
                 }
                 bottom--;
 
-                for (int i = bottom; i >= top; i--) {
-                    if (head == null) break;
+                for (int i = bottom; i >= top && head != null; i--) {
                     matrix[i][left] = head.val;
                     head = head.next;
                 }
