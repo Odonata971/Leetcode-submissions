@@ -32,23 +32,19 @@ class Solution {
                 head = head.next;
             }
             right--;
-
-            if (top <= bottom) {
-                for (int i = right; i >= left && head != null; i--) {
-                    matrix[bottom][i] = head.val;
-                    head = head.next;
-                }
-                bottom--;
-
-                for (int i = bottom; i >= top && head != null; i--) {
-                    matrix[i][left] = head.val;
-                    head = head.next;
-                }
-                left++;
+            
+            for (int i = right; i >= left && head != null; i--) {
+                matrix[bottom][i] = head.val;
+                head = head.next;
             }
+            bottom--;
+
+            for (int i = bottom; i >= top && head != null; i--) {
+                matrix[i][left] = head.val;
+                head = head.next;
+            }
+            left++;
         }
         return matrix;
-
-
     }
 }
