@@ -15,9 +15,8 @@ public class Solution {
         ListNode dummy = head;
 
         while (head.next != null) {
-            int a = head.val;
-            int b = head.next.val;
-            ListNode newNode = new ListNode(gcd(a, b));
+            int g = gcd(head.val, head.next.val);
+            ListNode newNode = new ListNode(g);
 
             newNode.next = head.next;
             head.next = newNode;
