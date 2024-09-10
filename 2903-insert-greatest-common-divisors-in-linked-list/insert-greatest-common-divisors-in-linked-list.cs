@@ -11,7 +11,7 @@
  */
 public class Solution {
     public ListNode InsertGreatestCommonDivisors(ListNode head) {
-        if (head == null || head.next == null) return head;
+        if (head == null) return head;
         ListNode dummy = head;
 
         while (head.next != null) {
