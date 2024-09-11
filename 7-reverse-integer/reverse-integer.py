@@ -1,17 +1,14 @@
 class Solution:
-    def reverse(self, x: int) -> int:
-        is_negative: bool = False
-
-        if x < 0:
-            is_negative = True
-            x *= -1
+    def reverse(self, x: int) -> int :
+        neg: int = -1 if x < 0 else 1 
+        maxi: int = 2 ** 31 - 1
         
-        res: int = 0
+        x *= neg
+        res = 0
         while x > 0:
             res = (res * 10) + (x % 10)
-            x //= 10
+            if res > maxi:
+                return 0
+            x //= 10    
+        return res * neg
         
-        if res > 2 ** 31 - 1:
-            return 0
-        
-        return res * -1 if is_negative else res
