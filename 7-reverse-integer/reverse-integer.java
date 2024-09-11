@@ -1,6 +1,6 @@
 class Solution {
      public int reverse(int x) {
-        double ans = 0;
+        long ans = 0;
         
         while (x != 0) {
             if (ans * 10 > Integer.MAX_VALUE || ans * 10 < Integer.MIN_VALUE) return 0;
