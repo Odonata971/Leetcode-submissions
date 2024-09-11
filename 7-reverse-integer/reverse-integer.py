@@ -7,8 +7,8 @@ class Solution:
         res = 0
         while x > 0:
             res = (res * 10) + (x % 10)
+            if res > maxi:
+                return 0
             x //= 10
-        if res > maxi:
-            return 0
         return res * neg
         
