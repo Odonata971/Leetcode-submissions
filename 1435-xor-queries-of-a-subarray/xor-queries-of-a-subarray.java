@@ -1,5 +1,6 @@
 class Solution {
     public int[] xorQueries(int[] arr, int[][] queries) {
+        // Optimized version
         int n = queries.length;
         int[] xorResults = new int[n];
 
