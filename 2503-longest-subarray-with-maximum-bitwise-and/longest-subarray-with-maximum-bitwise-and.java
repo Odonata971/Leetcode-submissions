@@ -12,7 +12,6 @@ class Solution {
             if (nums[i] == maxVal) {
                 localMax++;
             } else {
-                maxLen = localMax > maxLen ? localMax : maxLen;
                 localMax = 0;
             }
             maxLen = localMax > maxLen ? localMax : maxLen;
