@@ -6,11 +6,13 @@ class Solution {
             if (count < 9 && word.charAt(i) == word.charAt(i - 1)) {
                 count++;
             } else {
-                ans.append(count).append(word.charAt(i - 1));
+                ans.append(count);
+                ans.append(word.charAt(i - 1));
                 count = 1;
             }
         }
-        ans.append(count).append(word.charAt(word.length() - 1));
+        ans.append(count);
+        ans.append(word.charAt(word.length() - 1));
         return ans.toString();
     }
 }
