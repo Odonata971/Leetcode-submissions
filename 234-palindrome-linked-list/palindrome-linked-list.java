@@ -16,11 +16,10 @@ class Solution {
             array.add(head.val);
             head = head.next;
         }
+        int n = array.size();
         
-        int left = 0;
-        int right = array.size() - 1;
-        while (left < right) {
-            if (!array.get(left++).equals(array.get(right--))) {
+        for (int left = 0; left < n / 2; left++) {
+            if (!array.get(left).equals(array.get(n - 1 - left))) {
                 return false;
             }
         }
