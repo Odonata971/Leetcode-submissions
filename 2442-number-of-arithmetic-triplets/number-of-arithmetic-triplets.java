@@ -5,12 +5,12 @@ class Solution {
         if (n < 3) return 0;
         int ans = 0;
         
+        HashMap<Integer, Integer> arr = new HashMap<>();
         for (int i = 0; i < n; i++) {
-            for (int j = i + 1; j < n; j++) {
-                for (int k = j + 1; k < n; k++) {
-                    if (nums[j] - nums[i] == diff && nums[k] - nums[j] == diff) ans++;
-                }
-            }
+            arr.put(nums[i], i);
+        }
+        for (int j = 1; j < n - 1; j++) {
+            if (arr.containsKey(nums[j] + diff) && arr.containsKey(nums[j] - diff)) ans++;
         }
         return ans;
     }
