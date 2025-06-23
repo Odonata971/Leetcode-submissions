@@ -27,11 +27,17 @@ class Solution {
         for (long len = 1; n > 0; len *= 10) {
             for (long i = len; n > 0 && i < len * 10; i++) {
                 long p = createPalindrome(i, true);
-                if (isPalindrome(p, k)) { sum += p; n--; }
+                if (isPalindrome(p, k)) {
+                    sum += p;
+                    n--; 
+                }
             }
             for (long i = len; n > 0 && i < len * 10; i++) {
                 long p = createPalindrome(i, false);
-                if (isPalindrome(p, k)) { sum += p; n--; }
+                if (isPalindrome(p, k)) {
+                    sum += p;
+                    n--;
+                }
             }
         }
         return sum;
