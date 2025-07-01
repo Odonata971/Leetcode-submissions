@@ -1,8 +1,9 @@
 class Solution {
     public boolean isPerfectSquare(int num) {
+        if (num < 2) return true;
         long left = 0;
         long middle = 0;
-        long right = 46341; //cause sqrt(Integer.MAX_VALUE == 46341)
+        long right = num / 2;
 
         while (left <= right) {
             middle = (left + right) / 2;
