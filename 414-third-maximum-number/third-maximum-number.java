@@ -1,12 +1,16 @@
 class Solution {
-    public int thirdMax(int[] nums) {
-        List<Integer> distinctNums = new ArrayList<>();
-        for (int num : nums) {
-            if (!distinctNums.contains(num)) {
-                distinctNums.add(num);
+    public int thirdMax(int[] arr) {
+       Arrays.sort(arr); 
+        int n = arr.length;
+        int count = 1;  
+        for (int i = n - 2; i >= 0; i--) {
+            if (arr[i] != arr[i + 1]) {
+                count++;
+                if (count == 3) {
+                    return arr[i];
+                }
             }
         }
-        distinctNums.sort((a,b) -> - a.compareTo(b));
-        return distinctNums.size() >= 3 ? distinctNums.get(2) : distinctNums.get(0);
+        return arr[n - 1];
     }
 }
