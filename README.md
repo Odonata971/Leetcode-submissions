@@ -35,3 +35,19 @@ Commit messages in this repository will adhere to the following structure:
   `Memory: [memory_usage] ([percentile_ranking])`
 
 This consistent commit message format will ensure clear and concise communication of the problem being solved, as well as the performance characteristics of the implemented solution in terms of time complexity and space complexity relative to other submissions on the LeetCode platform.
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0874-walking-robot-simulation](https://github.com/Odonata971/Leetcode-submissions/tree/main/0874-walking-robot-simulation/) | Medium |
+## Hash Table
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0874-walking-robot-simulation](https://github.com/Odonata971/Leetcode-submissions/tree/main/0874-walking-robot-simulation/) | Medium |
+## Simulation
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0874-walking-robot-simulation](https://github.com/Odonata971/Leetcode-submissions/tree/main/0874-walking-robot-simulation/) | Medium |
+<!---LeetCode Topics End-->
