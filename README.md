@@ -49,5 +49,10 @@ This consistent commit message format will ensure clear and concise communicatio
 ## Simulation
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0657-robot-return-to-origin](https://github.com/Odonata971/Leetcode-submissions/tree/main/0657-robot-return-to-origin/) | Easy |
 | [0874-walking-robot-simulation](https://github.com/Odonata971/Leetcode-submissions/tree/main/0874-walking-robot-simulation/) | Medium |
+## String
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0657-robot-return-to-origin](https://github.com/Odonata971/Leetcode-submissions/tree/main/0657-robot-return-to-origin/) | Easy |
 <!---LeetCode Topics End-->
